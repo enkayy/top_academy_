@@ -1,0 +1,18 @@
+
+concatenate | 2023-10-04 20:35:04.558147 | can only concatenate tuple (not "dict") to tuple
+division | 2023-10-04 20:35:04.572512 | unsupported operand type(s) for /: 'tuple' and 'dict'
+concatenate | 2023-10-04 20:35:42.027756 | can only concatenate tuple (not "dict") to tuple
+division | 2023-10-04 20:35:42.042711 | unsupported operand type(s) for /: 'tuple' and 'dict'
+concatenate | 2023-10-04 20:35:58.493057 | can only concatenate tuple (not "dict") to tuple
+division | 2023-10-04 20:35:58.507177 | unsupported operand type(s) for /: 'tuple' and 'dict'
+concatenate | 2023-10-04 20:36:33.914377 | unsupported operand type(s) for +: 'int' and 'str'
+division | 2023-10-04 20:36:33.928335 | division by zero
+concatenate | 2023-10-04 20:37:17.686731 | unsupported operand type(s) for +: 'int' and 'str'
+concatenate | 2023-10-04 20:39:50.438229 | <traceback object at 0x000002A5A6FD43C0>
+concatenate | 2023-10-04 20:40:13.200357 | Inappropriate argument type.
+concatenate | 2023-10-04 20:40:31.516838 | Inappropriate argument type.
+division | 2023-10-04 20:40:31.531798 | Second argument to a division or modulo operation was zero.
+concatenate | 2023-10-04 20:41:03.005046 | unsupported operand type(s) for +: 'int' and 'str'
+division | 2023-10-04 20:41:03.020027 | division by zero
+concatenate | 2023-10-04 20:59:18.049398 | unsupported operand type(s) for +: 'int' and 'str'
+division | 2023-10-04 20:59:18.064442 | division by zero
