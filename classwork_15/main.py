@@ -251,4 +251,3 @@ from time import sleep
 #
 #
 # nums(1, 10)
-

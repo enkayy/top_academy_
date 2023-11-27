@@ -221,8 +221,8 @@
 
 # Задание 3
 
-class Stack:
 
+class Stack:
     def __init__(self, size):
         self.stack = []
         self.size = size
@@ -231,7 +231,7 @@ class Stack:
 
     def add(self, item):
         if len(self.stack) >= self.size:
-            print('Стек переполнен!')
+            print("Стек переполнен!")
         else:
             self.stack.append(item)
 
@@ -240,7 +240,7 @@ class Stack:
             self.stack.pop()
 
     def show_stack(self):
-        print(f'Очередь: {self.stack}')
+        print(f"Очередь: {self.stack}")
 
     def count(self):
         return len(self.stack)
@@ -266,54 +266,57 @@ class Stack:
 def main():
     stack = Stack(3)
     while True:
-        choice = input('\n1 - Добавить значение в стек\n'
-                       '2 - Удалить значение из стека\n'
-                       '3 - Количество значений в стеке\n'
-                       '4 - Проверить, пустой ли стек\n'
-                       '5 - Проверить, полный ли стек\n'
-                       '6 - Очистить стек\n'
-                       '7 - Получить значение верхнего элемента стека без удаления\n'
-                       '8 - Показать все значения стека\n'
-                       '0 - Выход -----> ')
+        choice = input(
+            "\n1 - Добавить значение в стек\n"
+            "2 - Удалить значение из стека\n"
+            "3 - Количество значений в стеке\n"
+            "4 - Проверить, пустой ли стек\n"
+            "5 - Проверить, полный ли стек\n"
+            "6 - Очистить стек\n"
+            "7 - Получить значение верхнего элемента стека без удаления\n"
+            "8 - Показать все значения стека\n"
+            "0 - Выход -----> "
+        )
 
-        if choice == '1':
-            value = int(input('\nВведите значение: '))
+        if choice == "1":
+            value = int(input("\nВведите значение: "))
             stack.add(value)
 
-        elif choice == '2':
+        elif choice == "2":
             stack.pop()
 
-        elif choice == '3':
+        elif choice == "3":
             count = stack.count()
-            print(f'\nКоличество значений в стеке: {count}')
+            print(f"\nКоличество значений в стеке: {count}")
 
         elif choice == "4":
             if stack.check_is_empty():
-                print('\nСтек пустой')
+                print("\nСтек пустой")
             else:
-                print('\nСтек не пустой')
+                print("\nСтек не пустой")
 
-        elif choice == '5':
+        elif choice == "5":
             if stack.check_is_full():
-                print('\nСтек полный')
+                print("\nСтек полный")
             else:
-                print('\nСтек не полный')
+                print("\nСтек не полный")
 
-        elif choice == '6':
+        elif choice == "6":
             stack.clear()
 
-        elif choice == '7':
+        elif choice == "7":
             value = stack.choice()
             if value is not None:
-                print(f'\nЗначение верхнего элемента стека: {value}')
+                print(f"\nЗначение верхнего элемента стека: {value}")
 
-        elif choice == '8':
+        elif choice == "8":
             stack.show_stack()
 
-        elif choice == '0':
-            print('\nЗавершение работы...')
+        elif choice == "0":
+            print("\nЗавершение работы...")
             break
         else:
-            print('\nТакого варианта нет!')
+            print("\nТакого варианта нет!")
+
 
 main()

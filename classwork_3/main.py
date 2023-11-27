@@ -153,8 +153,3 @@
 #         print(f'!{number}!', end=' ')
 #         continue
 #     print(i, end=' ')
-
-
-
-
-

@@ -165,34 +165,3 @@
 #
 # print(count)
 # print(fruit_tuple.count(fruit))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

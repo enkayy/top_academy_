@@ -135,12 +135,12 @@ contacts = {}
 
 
 def add_contact() -> None:
-    tel = input('\nВведите номер телефона в формате 8xxxxxxxxxx: ')
-    name = input('Введите имя контакта: ')
-    if re.match(r'\d{11}', tel):
+    tel = input("\nВведите номер телефона в формате 8xxxxxxxxxx: ")
+    name = input("Введите имя контакта: ")
+    if re.match(r"\d{11}", tel):
         contacts.setdefault(tel, name)
     else:
-        print('Неверный формат номера телефона!')
+        print("Неверный формат номера телефона!")
 
 
 # def add_contact() -> None:
@@ -156,60 +156,68 @@ def add_contact() -> None:
 
 
 def del_contact() -> None:
-    tel = input('\nВведите номер телефона контакта, который вы хотите удалить: ')
-    if re.match(r'\d{11}', tel):
+    tel = input("\nВведите номер телефона контакта, который вы хотите удалить: ")
+    if re.match(r"\d{11}", tel):
         if tel in contacts.keys():
             print(f'Контакт "{contacts[tel]}" с номером {contacts.get("", tel)} удален')
             del contacts[tel]
     else:
-        print('Неверный формат номера телефона!')
+        print("Неверный формат номера телефона!")
 
 
 def edit_contact() -> None:
-    tel = input('\nВведите номер телефона контакта, который вы хотите отредактировать: ')
-    print('Если вы не собираетесь редактировать имя или номер, поставте -')
-    new_tel = input('Введите новый номер телефона: ')
-    new_name = input('Введите новое имя контакта:')
-    if new_name == '-':
-        if re.match(r'\d{11}', tel) and re.match(r'\d{11}', new_tel):
+    tel = input(
+        "\nВведите номер телефона контакта, который вы хотите отредактировать: "
+    )
+    print("Если вы не собираетесь редактировать имя или номер, поставте -")
+    new_tel = input("Введите новый номер телефона: ")
+    new_name = input("Введите новое имя контакта:")
+    if new_name == "-":
+        if re.match(r"\d{11}", tel) and re.match(r"\d{11}", new_tel):
             if tel in contacts.keys():
                 name = contacts[tel]
-                print(f'Номер телефона у контакта "{contacts[tel]}" измененн: '
-                      f'\nСтарый номер - {contacts.get("", tel)}'
-                      f'\nНовый номер - {new_tel} ')
+                print(
+                    f'Номер телефона у контакта "{contacts[tel]}" измененн: '
+                    f'\nСтарый номер - {contacts.get("", tel)}'
+                    f"\nНовый номер - {new_tel} "
+                )
                 del contacts[tel]
                 contacts.setdefault(new_tel, name)
         else:
-            print('Неверный формат номера телефона!')
+            print("Неверный формат номера телефона!")
 
-    elif new_tel == '-':
+    elif new_tel == "-":
         if tel in contacts.keys():
-            print(f'Номер телефона у контакта "{contacts[tel]}" измененно на {new_name}: ')
+            print(
+                f'Номер телефона у контакта "{contacts[tel]}" измененно на {new_name}: '
+            )
             contacts.update(tel)
         else:
-            print('Такого номера телефона нет!')
+            print("Такого номера телефона нет!")
 
 
 def main():
     while True:
-        choice = input('\n1 - Добавить контакт\n'
-                       '2 - Удалить контакт\n'
-                       '3 - Редактировать контакт\n'
-                       '4 - Показать текущие контакты\n'
-                       '5 - Завершить программу -> ')
-        if choice == '1':
+        choice = input(
+            "\n1 - Добавить контакт\n"
+            "2 - Удалить контакт\n"
+            "3 - Редактировать контакт\n"
+            "4 - Показать текущие контакты\n"
+            "5 - Завершить программу -> "
+        )
+        if choice == "1":
             add_contact()
-        elif choice == '2':
+        elif choice == "2":
             del_contact()
-        elif choice == '3':
+        elif choice == "3":
             edit_contact()
-        elif choice == '4':
-            print(f'\n{contacts}')
-        elif choice == '5':
-            print('\nЗавершение работы программы...')
+        elif choice == "4":
+            print(f"\n{contacts}")
+        elif choice == "5":
+            print("\nЗавершение работы программы...")
             break
         else:
-            print('\nТакой функции нет!')
+            print("\nТакой функции нет!")
 
 
 main()

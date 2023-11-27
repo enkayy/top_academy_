@@ -88,7 +88,7 @@
 # numbers = input('Введите числа через пробел: ').split()
 #
 # for i_num in numbers:
-    # numbers[numbers.index(i_num)] = int(i_num)  # переводит числа из строчного(string) варианта в числовой(int)
+# numbers[numbers.index(i_num)] = int(i_num)  # переводит числа из строчного(string) варианта в числовой(int)
 #
 # for index, value in enumerate(numbers):  # нужно два значения для enumerate
 #     numbers[index] = int(value)  # второй способ
@@ -174,8 +174,3 @@
 #     sum_num += i_num
 # print(f'Сумма всех чисел в списке: {sum_num}\n'
 #       f'Среднее арифметическое всех чисел списка: {sum_num /  count_number}')
-
-
-
-
-

@@ -63,7 +63,6 @@
 # # нужно, чтобы складывать число и объект класса или два объекта
 #
 class Number:
-
     def __init__(self, num):
         self.num = num
 
@@ -73,7 +72,7 @@ class Number:
             # если хотим сложить 3 объекта, то нужно вернуть объект, а не инт
             # и выводит резултат через св-во экземпляра
         else:
-            return 'Сложение невозможно'
+            return "Сложение невозможно"
 
     def __sub__(self, other):  # перегрузка для -
         if isinstance(other, Number):
@@ -95,37 +94,37 @@ class Number:
         if isinstance(other, Number):
             return self.num == other.num
         else:
-            return 'Сравнение невозможно'
+            return "Сравнение невозможно"
 
     def __gt__(self, other):  # больше
         if isinstance(other, Number):
             return self.num > other.num
         else:
-            return 'Сравнение невозможно'
+            return "Сравнение невозможно"
 
     def __ge__(self, other):  # больше или равно
         if isinstance(other, Number):
             return self.num >= other.num
         else:
-            return 'Сравнение невозможно'
+            return "Сравнение невозможно"
 
     def __lt__(self, other):  # меньше
         if isinstance(other, Number):
             return self.num < other.num
         else:
-            return 'Сравнение невозможно'
+            return "Сравнение невозможно"
 
     def __le__(self, other):  # меньше или равно
         if isinstance(other, Number):
             return self.num <= other.num
         else:
-            return 'Сравнение невозможно'
+            return "Сравнение невозможно"
 
     def __ne__(self, other):  # неравно
         if isinstance(other, Number):
             return self.num != other.num
         else:
-            return 'Сравнение невозможно'
+            return "Сравнение невозможно"
 
 
 number_1 = Number(10)

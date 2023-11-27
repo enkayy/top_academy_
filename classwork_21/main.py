@@ -196,7 +196,3 @@
 # response = requests.get('https://swapi.dev/api/people/1/')
 # data = json.loads(response.text)
 # print(type(data))
-
-
-
-

@@ -65,23 +65,3 @@
 #     if target_health == 0:
 #         print(f'{warriors[attacker].name} победил!')
 #         break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

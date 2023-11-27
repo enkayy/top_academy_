@@ -90,16 +90,9 @@ import re
 #
 # print(text_h3)
 
-text = '4567'
+text = "4567"
 
-if re.match(r'\d{4}', text):  # match возвращает True/False
-    print('ok')
+if re.match(r"\d{4}", text):  # match возвращает True/False
+    print("ok")
 
 # Сразу несколько номеров телефона через split
-
-
-
-
-
-
-

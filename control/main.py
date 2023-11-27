@@ -143,4 +143,3 @@
 #         break
 #
 # print(text[end - 1:start:-1])
-

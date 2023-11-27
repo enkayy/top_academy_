@@ -1,5 +1,3 @@
-
-
 # value = '__main__'
 # print(__name__ == value)  # Name - название файла, то есть main
 # print(dir(__name__))  # Методы, которые по умолчанию встроены в файл (main)
@@ -24,4 +22,3 @@ import module
 # from math import *  # импортировать все через *, но лучше импортировать конкректные методы
 #
 # print(factorial(5), pow(12, 2))
-

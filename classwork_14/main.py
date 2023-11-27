@@ -139,49 +139,11 @@
 #     # print(reversed_text)
 #     for i_line in reversed_text:
 #         file.write(i_line.strip() + '\n')
-with open('bad_words.txt', 'r') as file:
-    with open('text_for_kid.txt', 'r') as file_2:
+with open("bad_words.txt", "r") as file:
+    with open("text_for_kid.txt", "r") as file_2:
         text = file_2.read()
         for bad in file.readlines():
             if bad.strip() in text:
-                text = text.replace(bad, '')
-    with open('text_for_kid.txt', 'w') as file_2:
+                text = text.replace(bad, "")
+    with open("text_for_kid.txt", "w") as file_2:
         file_2.write(text)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

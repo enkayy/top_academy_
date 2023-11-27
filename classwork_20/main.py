@@ -65,15 +65,14 @@
 
 # Связанные списки, существуют еще двунаправленные списки
 
-class Node:
 
+class Node:
     def __init__(self, value, next=None):
         self.value = value
         self.next = next
 
 
 class LinkedList:
-
     def __init__(self, head):
         self.head = head
 
@@ -168,54 +167,3 @@ linked_list.reverse()
 
 for i in linked_list.get_all_nodes():
     print(i)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

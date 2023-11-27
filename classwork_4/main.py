@@ -164,9 +164,3 @@
 #     i += 1
 # result = 9889 - count
 # print(result)
-
-
-
-
-
-

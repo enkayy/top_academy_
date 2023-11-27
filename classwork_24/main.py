@@ -87,4 +87,3 @@ class AbstractFactory:
 #
 # Лайфхак для дз в гитхабе
 # Прототип через deepcopy
-

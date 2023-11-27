@@ -1,4 +1,3 @@
-
 # def function_1(a, b, *args):  # *args (неименованный элемент) нужно для, чтобы передавать больше заданных элементов
 #     print(a, b, args)
 #
@@ -152,15 +151,15 @@
 # print(filtered_nums)
 
 students = [
-    ['std 1', 4.5],
-    ['std 9', 5],
-    ['std 3', 3.3],
-    ['std 7', 4.3],
-    ['std 5', 4.7],
-    ['std 22', 4.3],
-    ['std 2', 4.3],
-    ['std 43', 4.3],
-    ['std 90', 4.3],
+    ["std 1", 4.5],
+    ["std 9", 5],
+    ["std 3", 3.3],
+    ["std 7", 4.3],
+    ["std 5", 4.7],
+    ["std 22", 4.3],
+    ["std 2", 4.3],
+    ["std 43", 4.3],
+    ["std 90", 4.3],
 ]
 
 students_sorted_num = sorted(students, key=lambda x: x[1])
@@ -168,5 +167,3 @@ print(students_sorted_num)
 
 students_sorted_list = sorted(students, key=lambda x: int(x[0].split()[1]))
 print(students_sorted_list)
-
-

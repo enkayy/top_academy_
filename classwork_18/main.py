@@ -72,8 +72,8 @@
 # --- Наследование ---
 # Один класс может наследовать данные другого
 
-class Employee:
 
+class Employee:
     ID = 0
     TAX = 0.13
 
@@ -84,11 +84,14 @@ class Employee:
         self.salary = salary
 
     def get_salary_for_month(self, bonus=0):
-        return self.salary - self.salary * self.TAX + bonus  # налог + премия # Нужно брать налог у экземпляра класса
+        return (
+            self.salary - self.salary * self.TAX + bonus
+        )  # налог + премия # Нужно брать налог у экземпляра класса
+
     # поэтому ставим self.TAX, а не Employee.TAX
 
     def __str__(self):
-        return f'id: {self.id}\nemail: {self.email}\nsalary: {self.salary}\n'
+        return f"id: {self.id}\nemail: {self.email}\nsalary: {self.salary}\n"
 
 
 # использование наследования
@@ -104,15 +107,17 @@ class Manager(Employee):  # наследоваться могут несколь
     def get_employees(self):
         if self.employees:
             for i_employee in self.employees:
-                print(f'\tid: {i_employee.id}\n\temail: {i_employee.email}\n\tsalary{i_employee.salary}\n')
+                print(
+                    f"\tid: {i_employee.id}\n\temail: {i_employee.email}\n\tsalary{i_employee.salary}\n"
+                )
 
     def __str__(self):
-        return f'id: {self.id}\nemail: {self.email}\nsalary: {self.salary}\nEmployees: {self.employees}'
+        return f"id: {self.id}\nemail: {self.email}\nsalary: {self.salary}\nEmployees: {self.employees}"
+
     # к работнику можно обратится через id и ключу email
 
 
 class Engineer(Employee):
-
     TAX = 0.11
     RATE_PER_HOUR = 500
 
@@ -129,10 +134,10 @@ class Engineer(Employee):
         cls.RATE_PER_HOUR = per_hour
 
     def __str__(self):
-        return f'id: {self.id}\nemail: {self.email}\nrank: {self.rank}\nsalary: {self.salary}\n'
+        return f"id: {self.id}\nemail: {self.email}\nrank: {self.rank}\nsalary: {self.salary}\n"
 
 
-engineer_1 = Engineer('engineer@mail.ru', 6)
+engineer_1 = Engineer("engineer@mail.ru", 6)
 engineer_1.rub_per_hour(4000)
 engineer_1.get_salary_for_month(160)
 print(engineer_1)
@@ -149,35 +154,3 @@ print(engineer_1)
 # # print(manager_1.get_salary_for_month())
 # print(manager_1)
 # manager_1.get_employees()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
